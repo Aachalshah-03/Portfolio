@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aachal Shah Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Aachal Shah</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#education-section" class="nav-link"><span>Eduaction</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#certificate-section" class="nav-link"><span>Certificates</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" >
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Aachal Shah</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Student ',
+						'Fresher  ',
+						'Developer   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			             
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/aachal.jpg?alt=media&token=b7386e2c-8e8f-49e5-9345-ee5a49a600cf" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									  <p>
+										<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/aachal.jpg?alt=media&token=b7386e2c-8e8f-49e5-9345-ee5a49a600cf"download="aachal.jpg"class=" btn--download">Download</a>
+									  </p>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Aachal Shah</span></p>
+										<p><span class="title-s">Role: </span> <span>Student</span></p>
+								
+										<p><span class="title-s">Address: </span> <span>Kolhapur, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Java</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">89%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Web Designer</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>C/C++</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a graduacting student from Sanjay Ghodawat University, Kolhapur.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Web Designer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Front-End Developer</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span>Skills:</span> <span>Cloud, SQL, Java</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography</span></li>
+									
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+	        </div>
+        </div>
+
+		
+		
+		
+
+		<div class="row">
+			<h1 class="big-4"><b>Education</b></h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Sanjay Ghodawat University</span>
+    					
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2022</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Private High School</span>
+    					
+    				</div>
+				</div>
+    		</div>
+
+    		
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/work-1.png?alt=media&token=8ae876c9-3196-4e22-8b57-94f998b8dbec'); background-size: contain;">
+              </div>
+			  <p>
+				<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/work-1.png?alt=media&token=8ae876c9-3196-4e22-8b57-94f998b8dbec" download="work-1.png"class="  btn--download">Download</a>
+			</p>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading">
+					<a href="https://github.com/Aachalshah-03/Student-management-system/blob/main/Student">Student Management system using Java</a></h3>
+                <p>A basic mini project on how data of student is stored .</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/work-2.png?alt=media&token=e0cf2966-520b-45fd-b6e9-ccd6192a3b13'); ">
+              </div>
+			  <p>
+				<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/work-2.png?alt=media&token=e0cf2966-520b-45fd-b6e9-ccd6192a3b13"download="work-2.png"class=" btn--download">Download</a>
+			  </p>
+              <div class="text mt-3 float-right d-block">
+ <h3 class="heading">
+	<a href="https://github.com/Aachalshah-03/Bank-Management/blob/main/Bank">Bank Management System</a></h3>
+                <p>Mini project on bank Managenment handling the deposit,withdrawal etc. using C</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/work-3.png?alt=media&token=18b01d5e-2cc1-4279-b237-88e9185dc909'); background-size: contain;">
+              </div>
+			  <p>
+				<a href=""download="work-3.png"class=" btn--download">Download</a>
+			  </p>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading">Sudoku Game</a></h3>
+                <p>Made a sudoku Game using C++</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			<div class="block-20 zoom-effect" style="background-image:url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/portf.png?alt=media&token=66cc305e-cc76-45fb-824f-148193f4830f'); background-size: contain;">
+			</div>
+			<p>
+				<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/portf.png?alt=media&token=66cc305e-cc76-45fb-824f-148193f4830f"download="portf.png"class="btn--download">Download
+		
+				</a>
+
+			</p>
+			<div class="text mt-3 float-right d-block">
+
+			  <h3 class="heading">Portfolio</a></h3>
+			  <p>Made a personal portfolio website.</p>
+			</div>
+		  </div>
+		</div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		
+		<section class="ftco-section" id="certificate-section">
+			<div class="container">
+			  <div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				  <h1 class="big big-2">Certificates</h1>
+				  <h2 class="mb-4">Certificates</h2>
+				  
+				</div>
+			  </div>
+			  <div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert1.png?alt=media&token=6931b7ca-5475-41e1-968b-e38c63083805'); background-size: contain;">
+					</div>
+					<p>
+						<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert1.png?alt=media&token=6931b7ca-5475-41e1-968b-e38c63083805" download="cert1.png"class=" btn--download">Download</a>
+					</p>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading">Google Cloud Generative AI Course</a></h3>
+					  <p>It covered what it is, how it's used compared to traditional machine learning, and explores Google tools you can use to build your own generative AI applications.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+					<div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert2.png?alt=media&token=4f914d0c-eac8-4bf0-95c5-a7204a9849cc'); ">
+					</div>
+					<p>
+						<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert2.png?alt=media&token=4f914d0c-eac8-4bf0-95c5-a7204a9849cc"download="cert2.png"class=" btn--download">Download</a>
+					</p>
+					<div class="text mt-3 float-right d-block">
+				
+					  <h3 class="heading">Firebase Demo day</a></h3>
+					  <p>It highlighted how Firebase can be used to build, launch, and scale AI-powered full-stack apps using Google's best technologies.</p>
+					</div>
+				  </div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+					<div class="block-20 zoom-effect" style="background-image: url('https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert3.png?alt=media&token=5def5bf5-932a-4879-8951-48ad03b548e3'); background-size: contain;">
+					</div>
+					<p>
+						<a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/cert3.png?alt=media&token=5def5bf5-932a-4879-8951-48ad03b548e3" download="cert3.png" class=" btn--download">Download</a>
+					  </p>
+					<div class="text mt-3 float-right d-block">
+	  
+					  <h3 class="heading">Placement Preparation Programme</a></h3>
+					  <p>Enlightened me about how to crack job interviews and placement.</p>
+					</div>
+				  </div>
+				</div>
+				
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Kolhapur, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p>+91 8975339101</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p>aachal0304shah@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">CV</h3>
+	            <p><a href="https://firebasestorage.googleapis.com/v0/b/aachal-portfolio.appspot.com/o/CV%20Resume%20-%20final.png?alt=media&token=84162d65-a72c-40de-875b-6f0cfed952d7" download class="btn btn--download">Download</a></p>
+				
+	          </div>
+          </div>
+		  <div class="contact-container">
+			<form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+				<div class="contact-left-title">
+					<h3>Get in touch</h3>
+					<hr>
+				</div>
+				<input type="hidden" name="access_key" value="88f9a7d7-7d0c-4eed-9295-079533071444">
+					<input type="text" name="name" placeholder="Your Name"class="contact-inputs"required>
+					<input type="email" name="email" placeholder="Your Email"class="contact-inputs"required>
+					<textarea name="Message"placeholder="Your Message"class="contact-inputs"required></textarea>
+					<button type="submit">Submit</button>
+				</div>
+			</form>
+		</div>
+
+		  <div class="container">
+			<br>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/aachalshah/"><span class="icon-linkedin"></span></a></li>  
+				      <li class="ftco-animate"><a href="https://www.instagram.com/_aachalshah_03/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Aachal</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
