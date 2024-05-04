@@ -477,7 +477,7 @@
 	          </div>
           </div>
 		  <div class="contact-container">
-			<form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+			<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-left" onsubmit="return submitForm()">
 				<div class="contact-left-title">
 					<h3>Get in touch</h3>
 					<hr>
@@ -490,6 +490,13 @@
 				</div>
 			</form>
 		</div>
+		<script>
+			function submitForm() {
+				// Reset the form after submission
+				document.getElementById("contact-form").reset();
+				return true; // Allows the form submission to proceed
+			}
+		</script>
 
 		  <div class="container">
 			<br>
